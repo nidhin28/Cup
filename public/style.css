@@ -1,0 +1,741 @@
+/*Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt|Caudex|Puritan');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Redressed');
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #191919;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Puritan';
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'IM Fell French Canon SC', serif;
+    font-size: 2.2rem;
+    margin: 1rem .5rem;
+
+}
+
+h3 {
+    font-family: 'Rock Salt';
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+header {
+    padding: 1px 0;
+}
+
+/*remove default button styling*/
+
+button {
+    background: inherit;
+    border: none;
+    color: inherit;
+}
+
+button:hover {
+    background-color: aliceblue;
+    color: #0E2E45;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.background-div {
+    background: #00000047 url(images/football.jpg) no-repeat center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 33vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#homepage-header {
+    height: 11vh;
+}
+
+#signup-home-page {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+#form-text {
+    font-size: 1.3rem;
+    vertical-align: middle;
+    width: 90%;
+    text-align: center;
+    margin: 10px auto 0;
+    height: 22vh;
+}
+
+.form-text-section {
+    width: 100%;
+}
+
+#form-text p {
+    margin: 15px 0 0;
+}
+
+#stage {
+    display: inline;
+}
+
+.sign-up-form {
+    width: 90%;
+    vertical-align: middle;
+    font-weight: 600;
+    margin: 8% auto 0;
+    background-color: #FFFF;
+    color: #0E2E45;
+    max-width: 500px;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.sign-up-form legend {
+    margin: 10px auto;
+    padding: 10px;
+    border-bottom: #0E2E45 solid 1px;
+    width: 85%;
+    font-size: 2rem;
+}
+
+.sign-up-form fieldset {
+    border: none;
+    padding: 0 2rem;
+    line-height: 34px;
+    text-align: left;
+}
+
+.sign-up-form input {
+    margin: 10px auto 20px;
+}
+
+.sign-up-form input {
+    border: #0E2E45 1px solid;
+    width: 100%;
+}
+
+#signup-p {
+    /*Font-size set so that this view shows correctly*/
+    font-size: 1rem;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #66b8ff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: whitesmoke;
+    /*    width: 25%;*/
+    margin: 0 auto;
+    /*    margin: 5% 0;*/
+}
+
+.bottom-button {
+    width: 100%;
+    border-top: whitesmoke solid 1px;
+    margin: 50px auto 30px;
+    max-width: 1000px;
+    padding: 50px 0 0;
+}
+
+.bottom-button p {
+    line-height: 40px;
+}
+
+.login-button {
+    background-color: #66b8ff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: whitesmoke;
+    width: 25%;
+}
+
+.login-form {
+    width: 90%;
+    font-weight: 600;
+    margin: 40px auto;
+    background-color: #FFFF;
+    color: #0E2E45;
+    max-width: 500px;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 30px;
+    vertical-align: middle;
+}
+
+.login-form legend {
+    font-size: 36px;
+    margin: 10px auto;
+    padding: 10px;
+    border-bottom: #0E2E45 solid 1px;
+    width: 85%;
+}
+
+.login-form fieldset {
+    border: none;
+    padding: 0;
+    line-height: 34px;
+    text-align: left;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.login-form input {
+    border: #0E2E45 1px solid;
+    width: 100%;
+    margin: 10px auto 30px;
+    text-align: left;
+}
+
+#flag-shakes-logo {
+    display: inline-block;
+    max-width: 200px;
+    vertical-align: middle;
+}
+
+footer p {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+/*///////////////User Dashboard///////////////////*/
+
+.navbar {
+    text-align: center;
+    width: 100%;
+    background: #00000099 url(images/football.jpg) no-repeat center center;
+    background-size: 100% auto;
+    background-blend-mode: multiply;
+    padding: 1%;
+    font-size: 0;
+}
+
+#nav-header {
+    vertical-align: middle;
+    font-size: 1.5rem;
+}
+
+#nav-list {
+
+    vertical-align: middle;
+    font-size: 1.3rem;
+
+}
+
+#nav-list span,
+p {
+    display: inline-block;
+}
+
+#user-list {
+    width: 95%;
+    margin: 0 2.5% 2.5%;
+    border: 1px whitesmoke solid;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+#logout {
+    padding: 5px;
+}
+
+button #logout:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+#add-entry-button {
+    text-align: center;
+    background: rgba(245, 245, 245, .9);
+    color: black;
+    border-radius: 5px;
+    padding: 7px 15px;
+
+    margin: 1% 2.5% 3.5%;
+}
+
+#add-entry-button:hover {
+    background: rgba(245, 245, 245, .6);
+}
+
+#user-dashboard {
+    width: 100%;
+}
+
+#entry-toolbar {
+    width: 100%;
+    text-align: center;
+}
+
+#entry-views {
+    display: inline-block;
+    margin: 2% auto;
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+#entry-views p,
+button {
+    display: inline-block;
+}
+
+#entry-views button {
+    background-color: none;
+}
+
+.entry-div {
+    text-align: left;
+    background: rgba(245, 245, 245, .9);
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto 1.5%;
+}
+
+.entry-info {
+    /*    display: inline-block;*/
+    vertical-align: top;
+    width: 100%;
+}
+
+.entry-info p,
+span {
+    display: block;
+}
+
+.edit-entry-buttons {
+    float: right;
+    color: slategray;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.edit-entry-buttons span,
+p {
+    display: inline-block;
+}
+
+.edit-entry-buttons span:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.view-more {
+    text-align: center;
+    color: slategray;
+}
+
+.view-more:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.info-label {
+    text-transform: capitalize;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+
+.type {
+    font-size: 2rem;
+    color: grey;
+    font-family: Redressed;
+}
+
+/*
+.date {
+    width: 10%;
+}
+
+.play {
+    width: 22%;
+}
+*/
+
+.notes {
+    overflow-wrap: break-word;
+}
+
+/*----------------------------------------------------------*/
+
+/*Add Entry Form*/
+
+#add-entry-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+}
+
+.entry-wrapper {
+    line-height: 20px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 10px 50px 0;
+    width: 100%;
+    max-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.entry-form {
+    /*    background-color: whitesmoke;*/
+    color: black;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.entry-form input,
+textarea {
+    border: 1px #0E2E45 solid;
+    border-radius: 2px;
+    margin: 5px auto 10px;
+    width: 100%;
+}
+
+.entry-form select {
+    margin: 10px auto;
+}
+
+#create-entry-button {
+    margin: 20px auto;
+}
+
+.entry-form legend {
+    margin: 10px auto;
+    padding: 10px;
+    border-bottom: #0E2E45 solid 1px;
+    /*    width: 85%;*/
+    font-size: 1.5rem;
+}
+
+.entry-form fieldset {
+    text-align: center;
+}
+
+.date-text {
+    font-size: .5rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.play-info,
+.place-info {
+    width: 100%;
+    /*
+    vertical-align: top;
+    display: inline-block;
+    width: 48%;
+    margin: 1% auto;
+*/
+}
+
+/*
+.place-info {
+    margin-left: 1.9%;
+}
+*/
+
+.edit-entry-form {
+    text-align: center;
+}
+
+.edit-entry-form fieldset {
+    text-align: left;
+}
+
+.edit-entry-form input,
+textarea {
+    border: 1px #0E2E45 solid;
+    border-radius: 2px;
+    margin: 5px auto 10px;
+    width: 100%;
+}
+
+.edit-entry-form button {
+    width: auto;
+    margin: 10px auto;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+
+
+
+/*Edit|Delete Entries*/
+
+.entries-container {
+    text-align: left;
+    background: rgba(245, 245, 245, .9);
+    color: black;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 0 auto 1.5%;
+    font-size: 1.2rem;
+}
+
+.js-delete-entry {
+    text-align: center;
+}
+
+.delete-button {
+    background-color: red;
+    padding: 8px 18px;
+    border-radius: 8px;
+    color: whitesmoke;
+}
+
+.delete-button:hover {
+    background-color: slategrey;
+    color: red;
+}
+
+.cancel-button:hover {
+    cursor: pointer;
+    color: darkgrey;
+}
+
+/*/////////////Above this line, mobile styles. Below this line, desktop styles.///////////////*/
+
+/*iPhone portrait*/
+
+@media only screen and (min-width: 320px) {
+    body {
+        /*        color: purple;*/
+    }
+}
+
+/*iPhone landscape*/
+
+@media only screen and (min-width: 480px) {
+    /*
+    body {
+        color: green;
+    }
+*/
+    html {
+        font-size: 18px;
+    }
+    .navbar {
+        padding: 15px auto;
+    }
+    #nav-header {
+        width: 48%;
+        padding-left: 1.5%;
+        display: inline-block;
+        text-align: left;
+    }
+    #nav-list {
+        width: 48%;
+        padding-right: 1.5%;
+        display: inline-block;
+        text-align: right;
+    }
+    .background-div {
+        height: 33vh;
+    }
+    .sign-up-form {
+        margin-top: 8%;
+    }
+    #form-text p {
+        margin: 25px 0 15px;
+    }
+    #homepage-header {
+        height: auto;
+    }
+    #form-text {
+        margin: 0 auto;
+        height: auto;
+    }
+    #add-entry-button {
+        margin: 2.5%;
+        display: inline-block;
+    }
+    #entry-views button {
+        display: inline-block;
+    }
+    #entry-views {
+        width: auto;
+    }
+    /*
+    .entry-info {
+        display: inline-block;
+        width: auto;
+    }
+*/
+    .date,
+    .role {
+        display: inline-block;
+        width: 50%;
+    }
+    .location,
+    .theater-co {
+        display: inline-block;
+        width: 50%;
+    }
+    .notes,
+    .play,
+        {
+        width: 100%;
+    }
+}
+
+/*Android Resolution (Lollipop) 640px*/
+
+@media only screen and (min-width: 640px) {
+    html {
+        font-size: 22px;
+    }
+    .background-div {
+        height: 38vh;
+    }
+    .sign-up-form {
+        margin-top: 6%;
+    }
+    #nav-header {
+        width: 51%;
+    }
+}
+
+/*ipad potrait*/
+
+@media only screen and (min-width: 768px) {
+
+    /*
+    body {
+        color: red;
+    }
+*/
+    html {
+        font-size: 22px;
+    }
+    #form-text {
+        margin: 0 auto 20px;
+        /*        font-size: 24px;*/
+    }
+    .navbar {
+        line-height: 65px;
+    }
+    .navbar ul li {
+        display: inline;
+    }
+    .background-div {
+        height: 37vh;
+    }
+    .sign-up-form legend {
+        font-size: 1.5rem;
+    }
+    .play-info,
+    .place-info {
+        vertical-align: top;
+        display: inline-block;
+        width: 48%;
+        margin: 1% auto
+    }
+    .place-info {
+        margin-left: 1.9%;
+    }
+}
+
+/*ipad lanscape / small laptop*/
+
+@media only screen and (min-width: 1024px) {
+    /*
+    body {
+        color: aliceblue;
+    }
+*/
+    h1 {
+        font-size: 3rem;
+        margin: 1.9rem 1rem;
+    }
+    h3 {
+        font-size: 2.3rem;
+        line-height: 3.2rem;
+    }
+    .form-text-section {
+        margin: .5%;
+    }
+    #form-text {
+        display: inline-block;
+        width: 60%;
+        text-align: left;
+        padding: 0 20px 0 0;
+    }
+    .login-form {
+        display: inline-block;
+        width: 39%;
+    }
+    #nav-header {
+        width: 39%;
+        /*        font-size: 1.75rem;*/
+    }
+    #nav-list {
+        width: 60%;
+        /*        font-size: 1.2rem;*/
+    }
+    #signup-home-page {
+        /*        margin-bottom: 30px;*/
+        padding: 0 50px;
+    }
+    .background-div {
+        height: 53vh;
+    }
+    .sign-up-form {
+        margin-top: 0;
+    }
+    header {
+        /*Height set so that this view shows correctly*/
+        height: 25vh;
+    }
+
+    #stage {
+        text-align: center;
+        display: block;
+    }
+
+/*
+    .entry-div {
+        Make large entries scrollable
+        overflow: scroll;
+        max-height: 300px;
+    }
+*/
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gameshare Capstone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar" style="display: none;">
+        <div id="nav-header">
+            <h4>Football Nostalgia</h4>
+        </div>
+        <div id="nav-list">
+            <span id="loggedInName"></span>
+            <input type="hidden" id="loggedInUserName" value="">
+            <p> | </p>
+            <span><button type="button" id="logout">Logout</button></span>
+        </div>
+    </nav>
+
+    <section id="homepage-header">
+        <div class="background-div"></div>
+
+        <header role="banner">
+            <h1>Football Nostalgia</h1>
+        </header>
+    </section>
+
+    <main role="main">
+        <section id="signup-home-page">
+            <div id="form-text">
+                <h3>To remember all  <span id="stage">Goodmatches</span></h3>
+                <div class="form-text-section">
+                    <p>And to share the opinion</p>
+                    <p>about all the games to see</p>
+                </div>
+            </div>
+            <form class="login-form">
+                <legend>Login</legend>
+                <fieldset>
+                    <label for="loginUsername">Email</label>
+                    <input type="email" id="loginUsername" placeholder="Raymond@hotmail.com" >
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Ramon1980" >
+                </fieldset>
+                <button type="submit" class="submit-button" id="login-button">Sign In</button>
+                <span>Need to <button id="change-form-signup">Sign-up</button>?</span>
+            </form>
+        </section>
+
+        <section id="signup-page" style="display: none;">
+            <form class="sign-up-form">
+                <legend>Sign up</legend>
+                <fieldset>
+                    <label for="signUpName">Name</label>
+                    <input type="name" id="signUpName" placeholder="Tim Walker" >
+                    <label for="signUpUsername">Email</label>
+                    <input type="email" id="signUpUsername" placeholder="Raymond@hotmail.com" >
+                    <label for="signUpPassword">Password</label>
+                    <input type="password" id="signUpPassword" placeholder="Ramon1982">
+                </fieldset>
+                <button type="submit" class="submit-button">Sign In</button>
+                <br>
+                <p id="signup-p">Have an account? <button id="change-form-login">Login</button></p>
+            </form>
+        </section>
+        <section id="user-dashboard">
+            <div id="entry-toolbar">
+                <div id="entry-views">
+                    <p>View By:</p>
+                    <button type="button" id="date-sort" onclick="populateUserDashboardDate()">Date</button>
+                    <p> | </p>
+                    <button id="read-sort" onclick="populateUserDashboardWatch()">Watch</button>
+                    <p> | </p>
+                    <button id="seen-sort" onclick="populateUserDashboardClassic()">classic</button>
+                    <p> | </p>
+                    <button id="performed-sort" onclick="populateUserDashboardDramatic()">Dramatic</button>
+                </div>
+                <button id="add-entry-button">+ Add Entry</button>
+            </div>
+
+            <div id="user-list">
+                <p id="no-entry">No Entries - add an entry.</p>
+            </div>
+            <section id="add-entry-container" style="display: none;">
+                <div class="add-entry entry-wrapper">
+                    <a class="close-popup" href="#">&times;</a>
+                    <form class="entry-form" id="formentry">
+                        <legend>Create New Entry</legend>
+                        <fieldset>
+                            <label class="question" for="addEntryType">Entry Type:</label>
+                            <select name="entryType" class='addEntryType' required>
+                                <option value="classic">classic</option>
+                                <option value="Dramatic" selected>Dramatic</option>
+                                <option value="mustWatch">mustWatch</option>
+                            </select>
+                            <br>
+                            <label for="addInputDate">Date</label>
+                            <input type="date" class="addInputDate formInput" >
+                             
+                            <br>
+                            <div class="play-info">
+                                <label for="addInputPlay">matchVenue</label>
+                                <input type="text" class="addInputPlay formInput" placeholder="eg: Manchester" >
+                                <label for="addInputAuthor">match Referee</label>
+                                <input type="text" class="addInputAuthor formInput" placeholder="eg: pier luigi"  >
+                                <label for="addInputRole">match Result</label>
+                                <input type="text" class="addInputRole formInput" placeholder="eg: win " value="">
+                            </div>
+                            <div class="place-info">
+                                <label for="addInputCo">matchStadiumType</label>
+                                <input type="text" class="addInputCo formInput" placeholder="eg: outdoor " value="" >
+                                <label for="addInputLocation">Match capacity</label>
+                                <input type="text" class="addInputLocation formInput" placeholder="eg: 20000" >
+                            </div>
+                            <br>
+                            <label for="addInputNotes">Notes</label>
+                            <textarea name="Text1" class="addInputNotes formInput" cols="40" rows="5" placeholder="eg: Fantastic match" ></textarea>
+                        </fieldset>
+                        <button type="submit" id="create-entry-button" class="submit-button" >Add Entry</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+
+        
+        <p>Soccer LLC Copyright 2018</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
