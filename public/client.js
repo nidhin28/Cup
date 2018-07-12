@@ -82,22 +82,22 @@ function addEntryRenderHTML(results) {
 
     htmlString += `<br>`;
     htmlString += `<label for="inputDate">Date</label>`;
-    htmlString += `<input type="date" class="inputDate" value="${displayDate}">`;
+    htmlString += `<input type="date" class="inputDate" value="${displayDate}" disabled  >`;
     //    htmlString += `<button type="button" class="date-text">Need Date Range?</button>`;
     htmlString += `<div class="play-info">`;
     htmlString += `<label for="inputPlay">matchVenue</label>`;
-    htmlString += `<input type="text" class="inputPlay" placeholder="Play" value="${results.matchVenue}">`;
+    htmlString += `<input type="text" class="inputPlay" placeholder="Play" value="${results.matchVenue}" disabled >`;
     htmlString += `<input type="hidden" class="inputEntryID"  value="${results._id}">`;
     htmlString += `<label for="inputAuthor">matchReferee</label>`;
-    htmlString += `<input type="text" class="inputAuthor" placeholder="Author" value="${results.matchReferee}">`;
+    htmlString += `<input type="text" class="inputAuthor" placeholder="Author" value="${results.matchReferee}" disabled >`;
     htmlString += `<label for="inputRole">matchResult</label>`;
-    htmlString += `<input type="text" class="inputRole" placeholder="Role" value="${results.matchResult}">`;
+    htmlString += `<input type="text" class="inputRole" placeholder="Role" value="${results.matchResult}" disabled >`;
     htmlString += `</div>`;
     htmlString += `<div class="place-info">`;
     htmlString += `<label for="inputCo">StadiumType</label>`;
-    htmlString += `<input type="text" class="inputCo" placeholder="Company" value="${results.matchStadiumType}">`;
+    htmlString += `<input type="text" class="inputCo" placeholder="Company" value="${results.matchStadiumType}" disabled >`;
     htmlString += `<label for="inputLocation">matchCapacity</label>`;
-    htmlString += `<input type="text" class="inputLocation" placeholder="Location" value="${results.matchCapacity}">`;
+    htmlString += `<input type="text" class="inputLocation" placeholder="Location" value="${results.matchCapacity}" disabled >`;
     htmlString += `</div>`;
     htmlString += `<br>`;
     htmlString += `<label for="inputNotes">Notes</label>`;
@@ -173,7 +173,7 @@ function populateUserDashboardWatch(username) { //Get AJAX User Entries call, re
     if ((username == "") || (username == undefined) || (username == null)) {
         username = $('#loggedInUserName').val();
     }
-    //create the payload object (what data we send to the api call)
+    
     const UserObject = {
         user: username
     };
@@ -296,14 +296,6 @@ function htmlUserDashboard(resultsObject) {
     });
 }
 
-//function updateEditFormValues(results) {
-//    let id = results._id;
-//    let jsEntryText = $(`#${results._id}`).find('.entry-div .type').text();
-//    $(`#${results._id}`).find('.js-edit-entry .entry-type').val(jsEntryText);
-//    //    console.log($(`#${results._id}`).find('.js-edit-entry .entry-type').val());
-//    console.log(jsEntryText);
-//
-//}
 
 function scrollToEntry(id, focus) {
     let $container = $(`#${id}`);
@@ -311,11 +303,7 @@ function scrollToEntry(id, focus) {
     console.log(id, focus);
 
     $(`#${id}`).scrollTop($(`${focus}`).offset().top);
-    //    scrollTo.offset().top - container.offset().top + container.scrollTop()
-    // Or you can animate the scrolling:
-    //    $container.animate({
-    //        scrollTop: $scrollTo.offset().top - $container.offset().top + $container.scrollTop()
-    //    });​
+    
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -345,7 +333,7 @@ $(".sign-up-form").submit(function (event) {
     if (name == "") {
         alert('Please add a name');
     } else if (username == "") {
-        alert('Please add an user name');
+        alert('Please add an user name using emailid');
     } else if (password == "") {
         alert('Please add a password');
     }
@@ -382,6 +370,7 @@ $(".sign-up-form").submit(function (event) {
                 console.log(jqXHR);
                 console.log(error);
                 console.log(errorThrown);
+                alert('Please use Another emailID current one already taken');
             });
     };
 });
@@ -556,23 +545,7 @@ $('#logout').click(function (event) {
 
 });
 
-// Date |   Read |   Seen |   Performed
-//$('#date-sort').click(function (event) {
-//    event.preventDefault();
-//    alert('Sorted by Date');
-//});
-//$('#read-sort').click(function (event) {
-//    event.preventDefault();
-//    alert('Sorted by Read');
-//});
-//$('#seen-sort').click(function (event) {
-//    event.preventDefault();
-//    alert('Sorted by Seen');
-//});
-//$('#performed-sort').click(function (event) {
-//    event.preventDefault();
-//    alert('Sorted by Performed');
-//});
+
 
 //Update Entry
 $('#user-list').on('click', '.update-select', function (event) {
@@ -673,10 +646,7 @@ $('#user-list').on('click', '.delete-select', function (event) {
     $('.js-delete-entry').hide();
     $('.js-edit-entry').hide();
     $(event.currentTarget).closest('.entry-div').siblings('.js-delete-entry').show();
-    //    $(event.currentTarget).parents('.entry-div').append(deleteEntryForm);
-    //    $('html, body').animate({
-    //        scrollTop: $(this).closest('.entry-div').siblings('.js-delete-entry').offset().top
-    //    }, 1000);
+    
 });
 
 $('#user-list').on('submit', '.delete-entry-form', function (event) {
@@ -688,9 +658,7 @@ $('#user-list').on('submit', '.delete-entry-form', function (event) {
     const loggedInUserName = $("#loggedInUserName").val();
     const parentDiv = $(this).closest('.entries-container');
 
-    //    console.log(currentForm, entryId);
-    //    console.log(entryType, inputDate, inputPlay, inputAuthor, inputRole, inputCo, inputLocation, inputNotes);
-
+   
     //make the api call using the payload above
     $.ajax({
             type: 'DELETE',

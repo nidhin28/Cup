@@ -452,19 +452,10 @@ textarea {
 .play-info,
 .place-info {
     width: 100%;
-    /*
-    vertical-align: top;
-    display: inline-block;
-    width: 48%;
-    margin: 1% auto;
-*/
+    
 }
 
-/*
-.place-info {
-    margin-left: 1.9%;
-}
-*/
+
 
 .edit-entry-form {
     text-align: center;
@@ -594,12 +585,7 @@ textarea {
     #entry-views {
         width: auto;
     }
-    /*
-    .entry-info {
-        display: inline-block;
-        width: auto;
-    }
-*/
+    
     .date,
     .role {
         display: inline-block;
@@ -730,12 +716,14 @@ textarea {
         text-align: center;
         display: block;
     }
+.error-message {
+    color: red;
+    font-weight: bold;
+    width: 70%;
+    margin: 10px auto;
+}
+.hidden {
+    display: none;
+}
 
-/*
-    .entry-div {
-        Make large entries scrollable
-        overflow: scroll;
-        max-height: 300px;
-    }
-*/
 }
