@@ -20,5 +20,5 @@ This is link to live Application [football nostalgia](http://example.com/).
 # Add new Entry 
 ![addnew](https://user-images.githubusercontent.com/36836722/42665610-64d47960-860e-11e8-8182-0eeaa29796b0.png)
 # To run and install Application
-run npm install
-run npm start 
+*  run npm install
+*  run npm start 
